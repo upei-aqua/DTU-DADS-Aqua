@@ -1,6 +1,6 @@
 ---
 title: "The DTU-DADS-Aqua: Technical Description of Framework, Structure and Functions for Modelers"
-author: "Tariq Halasa, João Romero"
+author: "Tariq Halasa, João F. Romero"
 geometry: margin=1in
 bibliography: biblio.bib
 header-includes:

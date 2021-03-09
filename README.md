@@ -1,6 +1,6 @@
 ---
 title: "The DTU-DADS-Aqua: Introduction to the framework and parameters"
-author: "Romero, J. and Price, D."
+author: "João F. Romero, Derek Price"
 output: pdf_document
 ---
 # DTU-DADS-Aqua
@@ -43,7 +43,7 @@ Table 2. Parameters used in the ISAv model transmission processes.
 
 #### References
 
-Aldrin, M., Storvik, B., Frigessi, A., Viljugrein, H., & Jansen, P. A. (2010). A stochastic model for the assessment of the transmission pathways of heart and skeleton muscle inflammation, pancreas disease and infectious salmon anaemia in marine fish farms in Norway. Preventive Veterinary Medicine, 93(1), 51–61.
-Chang, B. D., Coombs, K. A., & Page, F. H. (2014). The Development of the Salmon Aquaculture Industry in Southwestern New Brunswick, Bay of Fundy, Including Steps Toward Integrated Coastal Zone Management. Aquaculture Economics & Management, 18(1), 1–27.
-Mardones, F. O., Jansen, P. A., Valdes-Donoso, P., Jarpa, M., Lyngstad, T. M., Jimenez, D., Carpenter, T.E., & Perez, A. M. (2013). Within-farm spread of infectious salmon anemia virus (ISAV) in Atlantic salmon Salmo salar farms in Chile. Diseases of Aquatic Organisms, 106(1), 7–16.
+Aldrin, M., Storvik, B., Frigessi, A., Viljugrein, H., & Jansen, P. A. (2010). A stochastic model for the assessment of the transmission pathways of heart and skeleton muscle inflammation, pancreas disease and infectious salmon anaemia in marine fish farms in Norway. Preventive Veterinary Medicine, 93(1), 51–61.  
+Chang, B. D., Coombs, K. A., & Page, F. H. (2014). The Development of the Salmon Aquaculture Industry in Southwestern New Brunswick, Bay of Fundy, Including Steps Toward Integrated Coastal Zone Management. Aquaculture Economics & Management, 18(1), 1–27.  
+Mardones, F. O., Jansen, P. A., Valdes-Donoso, P., Jarpa, M., Lyngstad, T. M., Jimenez, D., Carpenter, T.E., & Perez, A. M. (2013). Within-farm spread of infectious salmon anemia virus (ISAV) in Atlantic salmon Salmo salar farms in Chile. Diseases of Aquatic Organisms, 106(1), 7–16.  
 Vike, S., Duesund, H., Andersen, L., & Nylund, A. (2014). Release and survival of infectious salmon anaemia (ISA) virus during decomposition of Atlantic salmon (Salmo salar L.). Aquaculture, 420–421, 119–125.
