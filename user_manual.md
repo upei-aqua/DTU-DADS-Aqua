@@ -1,21 +1,21 @@
 ---
-title: "The DTU-DADS-ASF (Version 0.15.1): Technical Description of Framework, Structure and Functions for Modelers"
-author: "Tariq Halasa, MSc PhD"
+title: "The DTU-DADS-Aqua: Technical Description of Framework, Structure and Functions for Modelers"
+author: "Tariq Halasa, João Romero"
 geometry: margin=1in
 bibliography: biblio.bib
 header-includes:
 - \usepackage{mathpazo}
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
-- \fancyhead[LE,RO]{DTU-DADS-ASF (Version 0.15.1)}
+- \fancyhead[LE,RO]{DTU-DADS-Aqua}
 - \fancyhead[RE,LO]{User Manual}
 ---
 
 # Introduction
 
-The DTU-DADS-ASF (Version 0.15.1) is an adjusted version of the model from the DTU-DADS (Version 0.10) [@Boklund2013; @Halasa2014], which is an upgraded version of the original DADS (Davis Animal Disease Spread) model [@Bates2003]. The ASF model of DTU-DADS (DTU-DADS-ASF) is simulating the spread of African swine fever between swine herds through animal movements, abattoir, low risk, and medium risk contacts, and through local spread. The model simulates a set of control strategies including the construction of protection and surveillance zones, forward and backward tracing of direct and indirect movements and contacts, national standstill and surveillance of herds in the zones and from tracing. Furthermore, the model avails an extra function that sets full control on diagnosed herds. This is a useful strategy in case of lack of resource for culling of detected herds. As an alternative control strategy, the model simulates depopulation of susceptible herds within a specific distance from detected herds. A set of extra processes are simulated in the model such as detection and are explained in details in the next sections.
+The DTU-DADS-Aqua builds upon the DTU-DADS-ASF (Version 0.15.1) framework. The latter is an adjusted version of the model from the DTU-DADS (Version 0.10) [@Boklund2013; @Halasa2014], which is an upgraded version of the original DADS (Davis Animal Disease Spread) model [@Bates2003]. The DTU-DADS-Aqua framework has been adapted to simulate the waterborne spread of highly virulent aquatic pathogens between marine aquaculture sites, using seaway distance as a measure of site connectivity. The framework simulates a set of control strategies, namely disease surveillance and detection, and depopulation of infected marine net-pens or farms. Furthermore, the framework includes an extra function to control diagnosed net-pens. This is a useful strategy in case of lack of resources for depopulating detected net-pens. Additional processes that are simulated in the framework are explained in detail in the following sections.
 
-The purpose of this document is to describe the framework, structure and functions of the DTU-DADS-ASF (V. 0.15.1) model. The document will be technically directed that will facilitate the process for other modelers to work with the model. First the framework and structure of the model will be described, and then the different functions will be described in details in a way that will allow modelers to understand the code when they read the description of the code for the specific function. It is important to mention that this document will not focus on input parameters as they are described in another document.
+The purpose of this document is to describe the DTU-DADS-Aqua framework in regard to its structure and functions. This document is technically directed and aims to facilitate the use of the framework by modelers. First, we describe the framework and structure of the model, followed by its different functions. The level of detail provided on the description of each specific function herein allows modelers to understand the framework code and the purpose of each function. This document does not focus on input parameters as they are described in another document.
 
 # Model Framework and Structure
 
@@ -121,6 +121,10 @@ Indirect costs included losses due to export bans on livestock and livestock pro
 By the end of the function, a list including all outputs prepared by iter function are collected and printed in the working directory with the same ID that has been given to the run.
 26. `RandContacts`: This function determines based on a binomial process whether a contact would have happened.
 27. `rpert`: This is a random PERT function.
+
+# Shiny app
+
+A graphical user interface (GUI) was created using the R package "shiny" to allow modelers to easily and interactively define parameter values. The GUI can be launched from the user's own R session by running the **control-sim-app.R** file. We provide a viable example-scenario by default, which the user may directly run or modify as desired from the `Simulation control` tab; here, a limited number of parameters can be accessed and manipulated.
 
 # Appendix I: Input dataset files
 

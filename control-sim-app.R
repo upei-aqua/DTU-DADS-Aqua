@@ -42,13 +42,13 @@ ui <- navbarPage("DTU-DADS-Aqua",
 
         sliderInput("n",
                     "Number of iterations:",
-                    value = 1,
+                    value = 10,
                     min = 1,
-                    max = 100),
+                    max = 1000),
 
         sliderInput("maxTime",
                     "Simulation days:",
-                    value = 90,
+                    value = 120,
                     min = 1,
                     max = 365*3),
         
@@ -76,7 +76,7 @@ ui <- navbarPage("DTU-DADS-Aqua",
 
         sliderInput("Capacity",
                     "Culling capacity (thousands fish):",
-                    value = 90,
+                    value = 10,
                     min = 1,
                     max = 300,
                     step = .5),
@@ -265,8 +265,8 @@ server <- function(input, output) {
                    group = paste(iteration, infMode))) +
           geom_step() +
           scale_color_discrete(name = "Infection Mode") +
-          labs(x = "Days",
-               y = "# Infected cages",
+          labs(x = "Time (days)",
+               y = "Number of infected net-pens",
                title = "Infection dynamics",
                caption = "") +
           theme_light() +
