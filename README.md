@@ -11,6 +11,23 @@ A simulation framework for modelling waterborne spread of pathogens in aquacultu
 - Between net-pens in a farm
 - Between farms
 
+An example scenario of a simulated ISAv epidemic is provided, as defined by the parameter values in Tables 1 and 2.
+
+## Instructions for use
+
+The recommended use of the framework is described in this section; for further details please refer to the user manual. The DTU-DADS-Aqua framework can be used to directly create and run simulation models:
+1. Clone the GitHub repository or download its content
+2. Run the **SourceASF.R** file
+3. Run the `sourceASF` function
+4. Define parameter values within **ASFoptions.R**
+5. Run the `ASF` function
+
+Alternatively, the framework can be run through a shiny application:
+1. Clone the GitHub repository or download its content
+2. Run the **control-sim-app.R** through shiny
+3. Define parameter values within the `Example` tab
+4. `Run Simulation` in the `Simulation control` panel
+
 Table 1. Parameters used in the ISAv model control processes.
 
 | Name | Used | Value | Description | Source |

@@ -7,7 +7,7 @@ library("markdown")
 
 source("sourceASF.R")
 sourceASF()
-# have to decide what to do with index farm choice
+# User has to decide what to do with index farm choice
 # For now, first cage of each farm is used 10 times
 indexHerdFile <- rep(seq(1,780, 20), each = 10)
 

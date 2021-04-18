@@ -1,15 +1,18 @@
 ---
-title: "The DTU-DADS-Aqua: Technical Description of Framework, Structure and Functions for Modelers"
+title: 'The DTU-DADS-Aqua: Technical Description of Framework, Structure and Functions
+  for Modelers'
 author: "Tariq Halasa, João F. Romero"
 geometry: margin=1in
-bibliography: biblio.bib
 header-includes:
 - \usepackage{mathpazo}
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
 - \fancyhead[LE,RO]{DTU-DADS-Aqua}
 - \fancyhead[RE,LO]{User Manual}
+bibliography: biblio.bib
 ---
+
+\tableofcontents
 
 # Introduction
 
@@ -57,7 +60,7 @@ The model runs in the basic package of the freeware R and hence it does not requ
 
 The model is structured in one global environment that runs within a function called `ASF`. Within this function different functions are re-scoped to run in the global environment of ASF that they can be called and run from and within other functions. Thus in order to run the model (in the current version), it is needed to source the files by running the `sourceASF` function, and then index herds are read in R, thereafter the `ASF` function is run with the pre-defined options, as described below in the `ASFoptions` function.
 
-The model includes as well several external datasets that are imported into it and are necessary to model running. These datasets are described in Appendix I of this document. Furthermore, the model produces output files. These are explained in Appendix II.
+The framework requires several external datasets that are imported into it and are necessary for model running. These datasets are described in Appendix I of this document. Furthermore, the model produces output files. These are explained in Appendix II.
 
 # Description of Model Functions
 
@@ -124,7 +127,8 @@ By the end of the function, a list including all outputs prepared by iter functi
 
 # Shiny app
 
-A graphical user interface (GUI) was created using the R package "shiny" to allow modelers to easily and interactively define parameter values. The GUI can be launched from the user's own R session by running the **control-sim-app.R** file. We provide a viable example-scenario by default, which the user may directly run or modify as desired from the `Simulation control` tab; here, a limited number of parameters can be accessed and manipulated.
+A graphical user interface (GUI) was created using the R package "shiny" to allow modelers to easily and interactively define parameter values, thus creating different simulated scenarios. The GUI can be launched from the user's own R session by running the **control-sim-app.R** file; this will load the additional packages required to use the GUI and the framework simulation functions. Launching and running the GUI requires that the following packages are installed: "shiny", "shinythemes", "tidyverse", "markdown".  
+We provide a viable example-scenario by default, which the GUI user may directly run or modify as desired from the `Example` tab; here, a limited number of parameters can be accessed and manipulated.
 
 # Appendix I: Input dataset files
 
@@ -172,7 +176,7 @@ Several excel (.csv) sheets were added. The sheets and the information included 
 
 # Appendix II: Model output files
 
- The model produces a standard outputs based on the above summaries. These outputs are:
+ The model produces standard outputs based on the above summaries. These outputs are:
 
 1. Summaries per iteration (file name: **runID-ASF.txt**): *runID* is a variable used in `ASFoptions` file to assign an ID for the run. This summaries file includes the following variables:
     - Column 1: *FirstEpiDet*: day of first detection.

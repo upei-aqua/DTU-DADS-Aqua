@@ -32,7 +32,7 @@ ASFoptions <- function(...) {
     # Active BMA probability
     ProbActiveBMA = 0.8,
     # Between cages spread within a farm (transmission rate) - to be checked
-    BetCageProb = 0.05,
+    BetCageProb = 0.052,
     # Whether or not to call the whole farm if one cage is detected
     CULLALL = FALSE,
     # time between 2 surveillance visits for herds within a surveillance zone
@@ -43,9 +43,9 @@ ASFoptions <- function(...) {
     # ----Iteration control-----------------------------------------------------
 
     # Number of simulated epidemics
-    n = 1,
+    n = 10,
     # ID used for output and temp. files using a random number if NULL
-    runID = NULL,
+    runID = "test",
     # File used to step into an outbreak and start all iterations from same
     # setup.
     stepInFile = NULL,
@@ -53,7 +53,7 @@ ASFoptions <- function(...) {
     maxTime = 365,
     # Seed for random number generator. If negative the seed is found as:
     # set.seed(iteration + abs(seed))
-    seed = NULL,
+    seed = -10,
     # Logical for ingoring disease status information in input file (all reset
     # to 1 if TRUE)
     ignoreStatus = TRUE,
@@ -224,7 +224,7 @@ ASFoptions <- function(...) {
     # Number of locations that can be depoped at a time. not used anymore
     depopTeams = Inf,
     # The culling capacity per day in number of individuals
-    Capacity = c(25000),
+    Capacity = c(20000),
     # herd types to be culled
     cullTypes = c(1:18),
     # which days culling should be considered
