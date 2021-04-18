@@ -24,9 +24,15 @@ The recommended use of the framework is described in this section; for further d
 
 Alternatively, the framework can be run through a shiny application:
 1. Clone the GitHub repository or download its content
-2. Run the **control-sim-app.R** through shiny
-3. Define parameter values within the `Example` tab
-4. `Run Simulation` in the `Simulation control` panel
+2. Run the **control-sim-app.R** app file through shiny
+    + Note: to run the app the following packages must be installed: "shiny", "shinythemes", "tidyverse", "markdown".
+3. Define parameter values within the `Example` tab within the app
+4. `Run Simulation` in the `Simulation control` panel of the app
+
+## Model outputs
+
+Results from the simulated scenarios are summarized in two text files. These are created after each model run. For further details on file naming and interpretation of variables included in the summary files, please refer to the user manual.
+
 
 Table 1. Parameters used in the ISAv model control processes.
 

@@ -12,8 +12,6 @@ header-includes:
 bibliography: biblio.bib
 ---
 
-\tableofcontents
-
 # Introduction
 
 The DTU-DADS-Aqua builds upon the DTU-DADS-ASF (Version 0.15.1) framework. The latter is an adjusted version of the model from the DTU-DADS (Version 0.10) [@Boklund2013; @Halasa2014], which is an upgraded version of the original DADS (Davis Animal Disease Spread) model [@Bates2003]. The DTU-DADS-Aqua framework has been adapted to simulate the waterborne spread of highly virulent aquatic pathogens between marine aquaculture sites, using seaway distance as a measure of site connectivity. The framework simulates a set of control strategies, namely disease surveillance and detection, and depopulation of infected marine net-pens or farms. Furthermore, the framework includes an extra function to control diagnosed net-pens. This is a useful strategy in case of lack of resources for depopulating detected net-pens. Additional processes that are simulated in the framework are explained in detail in the following sections.
