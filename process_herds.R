@@ -548,9 +548,11 @@ constructAInfHerd <- function() {
 
     simDay = function() {
       if (nrow(herds) > 0) {
-        rS2L <- rbinom(nrow(herds), herds[,1],
+        # Supressing warning: NAs generated due to complete cage mortality (fixed on line 558)
+        rS2L <- suppressWarnings(
+                rbinom(nrow(herds), herds[,1],
                        1 - exp(-herds[,9] * ((herds[,3]) + (herds[,4])) /
-                         (herds[,6] - herds[,5])))
+                         (herds[,6] - herds[,5]))))
         
         ### Prevent model crash because of NAs due to complete cage mortality
         rS2L[is.na(rS2L)] <- 0
