@@ -30,13 +30,13 @@ ASFEngine <- function() {
       SurvHerds()
 
       ## Update relative effect of measures on DC, IMC and ILC
-      if (outbreakDetected) {
-
-        for (i in 1:length(controlMethods)) {
-          controlMethods[[i]]$day()
-        }
-
-      }
+      # if (outbreakDetected) {
+      # 
+      #   for (i in 1:length(controlMethods)) {
+      #     controlMethods[[i]]$day()
+      #   }
+      # 
+      # }
 
       if (outbreakDetected) {
 

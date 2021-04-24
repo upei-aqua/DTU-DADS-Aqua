@@ -261,7 +261,7 @@ server <- function(input, output) {
         mutate(nn = cumsum(n)) %>%
         ggplot(aes(x     = timeInfected,
                    y     = nn,
-                   color = factor(infMode, labels = c("External", "Internal")),
+                   color = factor(infMode, levels = 1:2, labels = c("Between farms", "Within farm")), # c("External", "Internal")
                    group = paste(iteration, infMode))) +
           geom_step() +
           scale_color_discrete(name = "Infection Mode") +

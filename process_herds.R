@@ -99,6 +99,7 @@ SurvHerds <- function() {
 
       TMP2[TMP2 > 1] <- 1
       toBeCulled     <- toBeCulled[runif(length(toBeCulled)) <= TMP2]
+      #toBeCulled     <- toBeCulled[rbinom(length(toBeCulled), 1, TMP2) >= 1]
 
       if (length(toBeCulled) > 0) {
         depopQueue <<-rbind(depopQueue,cbind(toBeCulled,gTime))
@@ -321,11 +322,18 @@ BCSpread <- function(label = 2, tStart = 0, tEnd = Inf) {
 
           if (length(SusCagesIF) > 0) {
 
-            NumbInf  <-  aInfHerd$getInfected(aHerd$ID[aHerd$FarmID == i])
+            #NumbInf  <-  aInfHerd$getInfected(aHerd$ID[aHerd$FarmID == i])
+            NumbInf  <-  sum(aInfHerd$getInfected(aHerd$ID[aHerd$FarmID == i]))
 
-            NumbFish <-  sapply(SusCagesIF, function(x) {
-              sum(aHerd$CageSizeVar[aHerd$FarmID == i & aHerd$ID != x])
-            })
+            # NumbFish <-  sapply(SusCagesIF, function(x) {
+            #   sum(aHerd$CageSizeVar[aHerd$FarmID == i & aHerd$ID != x])
+            # })
+            NumbFish <- sum(aHerd$CageSizeVar[aHerd$FarmID == i & !(aHerd$ID %in% SusCagesIF)])
+            
+            # printing mismatch between NumbInf and NumbFish (should not occur)
+            if (length(NumbInf) != length(NumbFish)) {
+              print(paste0("NumbInf = ", length(NumbInf), "; NumbFish = ", length(NumbFish)))
+            }
 
             probInf <- 1 - exp(-BetCageProb * NumbInf / NumbFish)
 
@@ -658,7 +666,7 @@ constructAInfHerd <- function() {
       index<-match(IDs,herds[,8])
 
       if (any(is.na(index))) {
-        warning("ConstructAInfHerd: Some IDs in not in aInfHerd!")
+        #warning("ConstructAInfHerd: Some IDs in not in aInfHerd!")
         index <- index[!is.na(index)]
       }
 
