@@ -170,9 +170,21 @@ server <- function(input, output) {
   
     if(input$update > 0) {
       
-      isolate(file.remove(paste0(input$runID, "-ISA.txt")))
-      isolate(file.remove(paste0(input$runID, "-AllInfCages.txt")))
-      
+      isolate(
+        ifelse(
+          file.exists(paste0(input$runID, "-ISA.txt")),
+          file.remove(paste0(input$runID, "-ISA.txt")),
+          print("Iteration file doesn't exist, nothing to remove")
+        )
+      )
+      isolate(
+        ifelse(
+          file.exists(paste0(input$runID, "-AllInfCages.txt")),
+          file.remove(paste0(input$runID, "-AllInfCages.txt")),
+          print("Infections file doesn't exist, nothing to remove")
+        )
+      )
+
       #newRun <- isolate(asf_options())
       isolate(ASF(asf_options()))
     
@@ -189,11 +201,11 @@ server <- function(input, output) {
       
       tryCatch({
 
-        x <- read_delim(
+        x <- read.delim(
           paste0(input$runID, "-ISA.txt"),
-          delim = " ",
-          skip = 1L,
-          col_names = c(
+          sep = " ",
+          skip = 1,
+          col.names = c(
              "First_Det",
              "Outbr_Duration",
              "Last_Inf_Cage",
@@ -231,11 +243,12 @@ server <- function(input, output) {
       
       tryCatch({
 
-        y <- read_delim(
+        y <- read.delim(
           paste0(input$runID, "-AllInfCages.txt"),
-          delim = " ",
-          skip = 1L,
-          col_names = c(
+          sep = " ",
+          skip = 1,
+          fill = TRUE,
+          col.names = c(
              "iteration",
              "diagnosisTime",
              "immuneTime",
