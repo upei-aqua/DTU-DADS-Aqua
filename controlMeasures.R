@@ -32,17 +32,19 @@ SurvZone <- function(size1 = 10, size2 = 5, label) {
       ## Notice the centers are the farm ids. not the cage ids
       Centers <- unique(aHerd$FarmID[SZcenters])
 
-      for (i in 1:length(Centers)) {
-        CurCenter <- Centers[i]
-        Distance  <- DistMat[CurCenter,]
-        IDS       <- unique(aHerd$FarmID)
-        indexZone <- switch(max(aHerd$DiagMode[aHerd$FarmID == CurCenter]),
-                            IDS[(Distance/1000) <= size1],
-                            IDS[(Distance/1000) <= size2])
-
-        aHerd$inSurZone[aHerd$FarmID %in% indexZone] <<- TRUE
+      if(length(Centers) > 0) {
+        for (i in 1:length(Centers)) {
+          CurCenter <- Centers[i]
+          Distance  <- DistMat[CurCenter,]
+          IDS       <- unique(aHerd$FarmID)
+          indexZone <- switch(max(aHerd$DiagMode[aHerd$FarmID == CurCenter]),
+                              IDS[(Distance/1000) <= size1],
+                              IDS[(Distance/1000) <= size2])
+  
+          aHerd$inSurZone[aHerd$FarmID %in% indexZone] <<- TRUE
+        }
       }
-
+      
       # here only herds within the surveillance zones are processed. herds will
       # get a visit, if they become included in a zone while they were never
       # visited, or when they have been visited earlier, but after inclusion in a
