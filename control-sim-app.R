@@ -7,9 +7,10 @@ library("markdown")
 
 source("sourceASF.R")
 sourceASF()
-# User has to decide what to do with index farm choice
-# For now, first cage of each farm is used 10 times
-indexHerdFile <- rep(seq(1,780, 20), each = 10)
+
+# User must decide how to select the index net-pens & match the number of iterations
+# For now, first pen of each farm is used 30 times (can run up to 1170 iterations)
+indexHerdFile <- rep(seq(1, 780, 20), each = 30)
 
 # ---- User interface ----------------------------------------------------------
 
@@ -62,14 +63,14 @@ ui <- navbarPage("DTU-DADS-Aqua",
         
         sliderInput("BetCageProb",
                     "Cage-specific transmission parameter:",
-                    value = 5,
+                    value = .052,
                     min = 0,
                     max = 10,
                     step = .05),
 
         sliderInput("ScalingInf",
                     "Distance-based scaling parameter:",
-                    value = .4,
+                    value = .42,
                     min = 0,
                     max = 3,
                     step = .05),
@@ -204,7 +205,7 @@ server <- function(input, output) {
         x <- read.delim(
           paste0(input$runID, "-ISA.txt"),
           sep = " ",
-          skip = 1,
+          skip = 0,
           col.names = c(
              "First_Det",
              "Outbr_Duration",
@@ -246,7 +247,7 @@ server <- function(input, output) {
         y <- read.delim(
           paste0(input$runID, "-AllInfCages.txt"),
           sep = " ",
-          skip = 1,
+          skip = 0,
           fill = TRUE,
           col.names = c(
              "iteration",
