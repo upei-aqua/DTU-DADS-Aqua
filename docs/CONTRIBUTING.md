@@ -32,7 +32,7 @@ If you are unsure what steps to follow you can start by looking through these be
 
 ## Your first contribution
 
-Once you have consulted the open-source [license](/docs/LICENSE.txt) and the supportive documentation you should be ready to start using DTU-DADS-Aqua and contributing to its development. Your contributions are greatly appreciated and we hope you will consider sharing them with the developers and community. To submit your contribution you may follow these steps:
+Once you have consulted the open-source [license](/docs/LICENSE) and the supportive documentation you should be ready to start using DTU-DADS-Aqua and contributing to its development. Your contributions are greatly appreciated and we hope you will consider sharing them with the developers and community. To submit your contribution you may follow these steps:
 
 - Create your own [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the DTU-DADS-Aqua code
 - Make and test changes to the code in your fork
