@@ -21,12 +21,12 @@ If you are unsure what steps to follow you can start by looking through these be
 - [Using GitHub](https://docs.github.com/en/get-started/quickstart/hello-world)
 - [Using the version-control system (VCS) Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
 - [Forking a repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-  > [!NOTE]
-  > A fork is a new repository that shares code and visibility settings with the original “upstream” repository.
+> [!NOTE]
+> A fork is a new repository that shares code and visibility settings with the original “upstream” repository.
   
 - [Cloning your forked repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
-  > [!NOTE]
-  > This will allow you to have the files from the forked repository locally on your computer.
+> [!NOTE]
+> This will allow you to have the files from the forked repository locally on your computer.
   
 - [Making and pushing changes](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-and-pushing-changes)
 
@@ -37,8 +37,8 @@ Once you have consulted the open-source [license](/docs/LICENSE.txt) and the sup
 - Create your own [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the DTU-DADS-Aqua code
 - Make and test changes to the code in your fork
 - If you consider these changes to be an improvement to the existing code or a useful feature, send a [pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request) to propose incorporating your changes into the main project
-  > [!TIP]
-  Please include a summary description of your proposed changes to the code to guide the review process.
+> [!TIP]
+> Please include a summary description of your proposed changes to the code to guide the review process.
   
 - After your pull request has been reviewed and it can be merged into the repository
 

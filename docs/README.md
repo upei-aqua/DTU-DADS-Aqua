@@ -28,8 +28,8 @@ The basic recommended use of the framework is described in this section; for fur
 Alternatively, the framework can be run through a Shiny application:
 1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo?platform=windows) and [clone](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) the DTU-DADS-Aqua GitHub repository
 2. Run the [control-sim-app](/control-sim-app.R) script to deploy the Shiny app locally
-   > [!IMPORTANT]
-   > To be able to run the Shiny app the following packages must be installed: "shiny", "shinythemes", "tidyverse", "markdown".
+> [!IMPORTANT]
+> To be able to run the Shiny app the following packages must be installed: "shiny", "shinythemes", "tidyverse", "markdown".
    
 3. Define parameter values within the `Example` tab within the app
 4. Click `Run Simulation` in the `Simulation control` panel of the app
