@@ -11,8 +11,8 @@ There are many ways to contribute, from improving the documentation, submitting 
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, we reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-[!NOTE]
-Please, don't use the issue tracker for support questions. Check whether the [user manual](/docs/user_manual.md) can help with your issue. [Stack Overflow](https://stackoverflow.com/) is also worth considering for R code-related questions.
+> [!NOTE]
+> Please, don't use the issue tracker for support questions. Check whether the [user manual](/docs/user_manual.md) can help with your issue. [Stack Overflow](https://stackoverflow.com/) is also worth considering for R code-related questions.
 
 ## Getting started
 
@@ -21,19 +21,25 @@ If you are unsure what steps to follow you can start by looking through these be
 - [Using GitHub](https://docs.github.com/en/get-started/quickstart/hello-world)
 - [Using the version-control system (VCS) Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
 - [Forking a repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-  [!NOTE] A fork is a new repository that shares code and visibility settings with the original “upstream” repository.
+  > [!NOTE]
+  > A fork is a new repository that shares code and visibility settings with the original “upstream” repository.
+  
 - [Cloning your forked repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository)
-  [!NOTE] This will allow you to have the files from the forked repository locally on your computer.
+  > [!NOTE]
+  > This will allow you to have the files from the forked repository locally on your computer.
+  
 - [Making and pushing changes](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-and-pushing-changes)
 
 ## Your first contribution
 
-Once you have consulted the open-source [license](/docs/LICENSE.md) and the supportive documentation you should be ready to start using DTU-DADS-Aqua and contributing to its development. Your contributions are greatly appreciated and we hope you will consider sharing them with the developers and community. To submit your contribution you may follow these steps:
+Once you have consulted the open-source [license](/docs/LICENSE.txt) and the supportive documentation you should be ready to start using DTU-DADS-Aqua and contributing to its development. Your contributions are greatly appreciated and we hope you will consider sharing them with the developers and community. To submit your contribution you may follow these steps:
 
 - Create your own [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the DTU-DADS-Aqua code
 - Make and test changes to the code in your fork
 - If you consider these changes to be an improvement to the existing code or a useful feature, send a [pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request) to propose incorporating your changes into the main project
-  [!TIP] Please include a summary description of your proposed changes to the code to guide the review process.
+  > [!TIP]
+  Please include a summary description of your proposed changes to the code to guide the review process.
+  
 - After your pull request has been reviewed and it can be merged into the repository
 
 ## Bugs and issues
@@ -41,13 +47,16 @@ Once you have consulted the open-source [license](/docs/LICENSE.md) and the supp
 If you identify issues or unexpected behaviors in the code, please consider [creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue). When filing an issue, please make sure to answer these 5 questions:
 
 1. What version of R are you using?
-[!TIP] Type `R.version.string` on your console to find out.
+> [!TIP]
+> Type `R.version.string` on your console to find out.
+
 2. What operating system and processor architecture are you using?
 3. What did you do?
 4. What did you expect to see?
 5. What did you see instead?
 
-[!NOTE] After consulting the available documentation, general questions should be sent to the developers instead of the issue tracker.
+> [!NOTE]
+> After consulting the available documentation, general questions should be sent to the developers instead of the issue tracker.
 
 ## Code review
 
